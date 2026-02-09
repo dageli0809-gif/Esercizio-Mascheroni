@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Modulo di Registrazione Esteso</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 25px 35px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .inline-group label {
+      display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 8px;
+    }
+
+    .actions {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Modulo di Registrazione</h1>
+
+    <form action="#" method="post">
+
+      <!-- DATI PERSONALI -->
+      <fieldset>
+        <legend>Dati personali</legend>
+
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome">
+        </div>
+
+        <div class="form-group">
+          <label for="eta">Età</label>
+          <input type="number" id="eta" name="eta" min="0" max="120">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="paese">Paese di residenza</label>
+          <select id="paese" name="paese">
+            <option value="">-- Seleziona --</option>
+            <option value="it">Italia</option>
+            <option value="fr">Francia</option>
+            <option value="de">Germania</option>
+            <option value="es">Spagna</option>
+            <option value="uk">Regno Unito</option>
+            <option value="us">Stati Uniti</option>
+            <option value="br">Brasile</option>
+            <option value="jp">Giappone</option>
+            <option value="au">Australia</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- GENERE -->
+      <fieldset>
+        <legend>Identità di genere</legend>
+
+        <div class="form-group inline-group">
+          <label>
+            <input type="radio" name="genere" value="maschio">
+            Maschio
+          </label>
+          <label>
+            <input type="radio" name="genere" value="femmina">
+            Femmina
+          </label>
+          <label>
+            <input type="radio" name="genere" value="non_binario">
+            Non binario
+          </label>
+          <label>
+            <input type="radio" name="genere" value="altro">
+            Altro
+          </label>
+          <label>
+            <input type="radio" name="genere" value="preferisco_non_dire">
+            Preferisco non dire
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- PASSIONI -->
+      <fieldset>
+        <legend>Passioni e interessi</legend>
+
+        <div class="form-group inline-group">
+          <label>
+            <input type="checkbox" name="interessi[]" value="sport">
+            Sport
+          </label>
+          <label>
+            <input type="checkbox" name="interessi[]" value="musica">
+            Musica
+          </label>
+          <label>
+            <input type="checkbox" name="interessi[]" value="cinema">
+            Cinema
+          </label>
+          <label>
+            <input type="checkbox" name="interessi[]" value="lettura">
+            Lettura
+          </label>
+          <label>
+            <input type="checkbox" name="interessi[]" value="viaggi">
+            Viaggi
+          </label>
+          <label>
+            <input type="checkbox" name="interessi[]" value="tecnologia">
+            Tecnologia
+          </label>
+          <label>
+            <input type="checkbox" name="interessi[]" value="cucina">
+            Cucina
+          </label>
+          <label>
+            <input type="checkbox" name="interessi[]" value="arte">
+            Arte
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="commento">Commento o descrizione personale</label>
+          <textarea id="commento" name="commento" rows="4"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- CONFERME -->
+      <fieldset>
+        <legend>Conferme</legend>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="termini" required>
+            Accetto i termini e condizioni
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="copia_email">
+            Invia una copia del modulo alla mia email
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- CAMPO NASCOSTO -->
+      <input type="hidden" name="origine" value="homepage">
+
+      <div class="actions">
+        <input type="submit" value="Invia modulo">
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
